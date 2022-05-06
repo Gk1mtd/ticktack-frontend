@@ -1,0 +1,324 @@
+/* variables */
+:root {
+  --backgroundcolor: #252526;
+  --green: #12b886;
+  --orange: #ff4600;
+  --blue: #479eea;
+}
+
+body {
+  /* background-color: var(--backgroundcolor); */
+  font-size: 32px;
+  background-color: var(--backgroundcolor);
+  color: white;
+  width: 90%;
+  margin: 2% 5% 2%;
+  text-align: center;
+}
+
+/* Home */
+.Home {
+  display: flex;
+  flex-direction: column;
+}
+.Home h2 {
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-top: 55px;
+  margin-bottom: -15px;
+}
+.Home p {
+  font-size: 0.7em;
+  margin-bottom: 5px;
+}
+.Home video {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+/* Link appeareance as buttons */
+.link-button {
+  text-decoration: none;
+  color: var(--orange);
+  border: 1px solid white;
+
+  border-radius: 90px;
+  margin-top: 15px;
+  padding: 1px 0 6px 0;
+}
+.link-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+input {
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Signup */
+.Signup,
+.Login {
+  display: flex;
+  flex-direction: column;
+}
+/* Buttons */
+.Signup button,
+.Login button,
+.Setlists button {
+  background: none;
+  border: 1px solid white;
+  border-radius: 90px;
+  color: var(--orange);
+  padding: 8px 20px;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 0.9em;
+  width: 80%;
+}
+.save-button {
+  color: white;
+  font-size: 1em;
+  margin-top: 20px;
+  background-color: var(--green);
+  border: none;
+  border-radius: 90px;
+  min-width: 40vw;
+  margin: auto;
+  margin-top: 15px;
+  padding: 8px;
+}
+.logout-button {
+  background: none;
+  width: 40vw;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 90px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.logout-button:hover,
+.delete-button:hover {
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
+}
+.delete-button {
+  background-color: tomato;
+  padding: 8px;
+  border-radius: 90px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 15px;
+  border: none;
+  color: white;
+  min-width: 40vw;
+  cursor: pointer;
+}
+.delete-button-round{
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  display: inline;
+}
+
+/* Setlists and Setlist */
+.user-icon {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.user-icon img {
+  width: 64px;
+}
+.list-item {
+  display: block;
+  text-decoration: none;
+  color: var(--orange);
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 90px;
+  margin: auto;
+  padding: 1px 0 6px 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.list-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
+}
+/* Input form and + to add items */
+.add-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+.add-item input {
+  width: 100%;
+  display: inline;
+}
+.add-item button {
+  width: 20%;
+  color: white;
+  display: inline;
+  padding: 0;
+  padding-bottom: 10px;
+  line-height: 20px;
+  border: none;
+  font-size: 2em;
+  margin: auto;
+  margin-top: 15px;
+  background: none;
+}
+
+/* Setlist */
+.Setlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.setlist-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.song-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.song-card p {
+  position: relative;
+  left: -35px;
+}
+
+.song-card .list-item {
+  width: 50%;
+  padding: 0;
+  margin: auto;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: white;
+}
+.plus-minus {
+  width: 50px;
+}
+
+.Setlist .link-button {
+  font-size: 1.1em;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Song */
+.Song {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Song input {
+  margin: 10px;
+}
+
+.song-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.song-buttons p {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  width: 25%;
+}
+.play-stop-button {
+  width: 70px;
+  height: 70px;
+}
+
+.play-stop-button img {
+  width: 100%;
+  margin: auto;
+}
+
+.Song textarea {
+  font-size: 0.7em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.User {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button {
+  background: none;
+  border: none;
+  color: white;
+  margin: 20px;
+  font-size: 1em;
+}
+
+/* for desktops */
+@media screen and (min-width: 810px) {
+  .Home {
+    display: flex;
+    flex-direction: column;
+  }
+  .Home video {
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .link-button {
+    text-decoration: none;
+    color: var(--orange);
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.2);
+    border-radius: 90px;
+    margin: auto;
+    padding: 1px 0 6px 0;
+    margin-top: 15px;
+    width: 30%;
+  }
+  .link-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
+  }
+  form {
+    width: 50%;
+  }
+
+  .setlist-item {
+    width: 60%;
+  }
+  .setlist-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3);
+  }
+}
