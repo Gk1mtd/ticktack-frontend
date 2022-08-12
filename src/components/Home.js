@@ -26,12 +26,6 @@ function Home() {
         </p>
         <p>Thats Metro-Know-Me, an app for musicians.</p>
         <p>From Philipp Kastl and Michael Seitz</p>
-        <iframe
-          width="50%"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/D7-929Xh8yo"
-          title="YouTube video player"
-        ></iframe>
       </div>
     </div>
   );
