@@ -25,7 +25,6 @@ function Home() {
           setlist. Each song can have its own BPM.
         </p>
         <p>Thats Metro-Know-Me, an app for musicians.</p>
-        <p>From Philipp Kastl and Michael Seitz</p>
       </div>
     </div>
   );
