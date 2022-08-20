@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const { REACT_APP_API_URL } = process.env;
-const api = axios.create({
-  baseURL: REACT_APP_API_URL,
-  withCredentials: true,
-});
 
 function Setlists() {
+  const api = axios.create({
+    baseURL: REACT_APP_API_URL,
+    withCredentials: true,
+  });
   const [setlists, setSetlists] = useState([]);
   const [errors, setErrors] = useState("");
 
@@ -33,7 +33,7 @@ function Setlists() {
       const { data } = await api.get("/setlist/getall-setlists", {
         withCredentials: true,
       });
-      setSetlists(data);
+      await setSetlists(data);
       setErrors(data);
     } catch (error) {
       setErrors(errors);
@@ -54,7 +54,8 @@ function Setlists() {
 
       <h1>Setlists</h1>
       <div>
-        <summary>dev stuff
+        <summary>
+          dev details
           <details>{JSON.stringify(errors)}</details>
         </summary>
       </div>
