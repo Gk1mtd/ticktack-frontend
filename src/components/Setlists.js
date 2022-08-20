@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import userIcon from "../assets/acc image.png";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const api = axios.create({
 });
 
 function Setlists() {
-  const [setlists, setSetlists] = React.useState([]);
+  const [setlists, setSetlists] = useState([]);
 
   /** retrieves all setlists from the current user, sets the state for auto rerender */
   async function getAllSetlists() {
