@@ -53,7 +53,12 @@ function Setlists() {
       </div>
 
       <h1>Setlists</h1>
-      <div>{JSON.stringify(errors)}</div>
+      <div>
+        <summary>dev stuff
+          <details>{JSON.stringify(errors)}</details>
+        </summary>
+      </div>
+
       {/** prints setlists from user, gained from custom hook usesetlistapi */}
       {setlists.map((element) => (
         <Link
