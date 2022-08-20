@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import userIcon from "../assets/acc image.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 const { REACT_APP_API_URL } = process.env;
-
 function Setlists() {
+  const userEmail = localStorage.getItem('email');
+  
   const api = axios.create({
     baseURL: REACT_APP_API_URL,
     withCredentials: true,
@@ -30,7 +31,7 @@ function Setlists() {
   /** retrieves all setlists from the current user, sets the state for auto rerender */
   async function getAllSetlists() {
     try {
-      const { data } = await api.get(`/setlist/getall-setlists`, {
+      const { data } = await api.get(`/setlist/getall-setlists/${userEmail}`, {
         withCredentials: true,
       });
       await setSetlists([setlists].concat(data));
