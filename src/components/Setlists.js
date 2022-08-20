@@ -10,6 +10,18 @@ const api = axios.create({
 function Setlists() {
   const [setlists, setSetlists] = useState([]);
 
+  /** creates a new setlist and calls getallSetlists for rerender again */
+  async function createSetlist(newSetlist) {
+    try {
+      await api.post(
+        "/setlist/create-setlist",
+        { name: newSetlist },
+        { withCredentials: true }
+      );
+      getAllSetlists();
+    } catch (error) {}
+  }
+
   /** retrieves all setlists from the current user, sets the state for auto rerender */
   async function getAllSetlists() {
     try {
