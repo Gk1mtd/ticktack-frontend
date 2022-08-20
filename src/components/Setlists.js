@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import userIcon from "../assets/acc image.png";
 import { Link } from "react-router-dom";
-import useSetlistAPI from "../customHooks/setlist.api";
+
+const api = axios.create({
+  baseURL: REACT_APP_API_URL,
+  withCredentials: true,
+});
 
 function Setlists() {
-  const { createSetlist } = useSetlistAPI();
-
   const [setlists, setSetlists] = React.useState([]);
 
   /** retrieves all setlists from the current user, sets the state for auto rerender */
