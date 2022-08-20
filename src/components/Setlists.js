@@ -33,7 +33,7 @@ function Setlists() {
       const { data } = await api.get("/setlist/getall-setlists", {
         withCredentials: true,
       });
-      await setSetlists(data);
+      await setSetlists([setlists].concat(data));
       setErrors(data);
     } catch (error) {
       setErrors(errors);
