@@ -54,10 +54,10 @@ function Setlists() {
 
       <h1>Setlists</h1>
       <div>
-        <summary>
-          dev details
-          <details>{JSON.stringify(errors)}</details>
-        </summary>
+        <details>
+          <summary>dev details</summary>
+          {JSON.stringify(errors)}
+        </details>
       </div>
 
       {/** prints setlists from user, gained from custom hook usesetlistapi */}
