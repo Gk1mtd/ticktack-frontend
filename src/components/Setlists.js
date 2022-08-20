@@ -5,8 +5,8 @@ import axios from "axios";
 
 const { REACT_APP_API_URL } = process.env;
 function Setlists() {
-  const userEmail = localStorage.getItem('email');
-  
+  const userEmail = localStorage.getItem("email");
+
   const api = axios.create({
     baseURL: REACT_APP_API_URL,
     withCredentials: true,
@@ -54,13 +54,6 @@ function Setlists() {
       </div>
 
       <h1>Setlists</h1>
-      <div>
-        <details>
-          <summary>dev details</summary>
-          <p>{JSON.stringify(errors)}</p>
-          <p>{setlists.length}</p>
-        </details>
-      </div>
 
       {/** prints setlists from user, gained from custom hook usesetlistapi */}
       {setlists.map((element) => (
