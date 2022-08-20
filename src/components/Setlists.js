@@ -30,7 +30,7 @@ function Setlists() {
   /** retrieves all setlists from the current user, sets the state for auto rerender */
   async function getAllSetlists() {
     try {
-      const { data } = await api.get("/setlist/getall-setlists", {
+      const { data } = await api.get(`/setlist/getall-setlists`, {
         withCredentials: true,
       });
       await setSetlists([setlists].concat(data));
