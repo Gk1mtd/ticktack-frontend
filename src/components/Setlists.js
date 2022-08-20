@@ -12,7 +12,6 @@ function Setlists() {
     withCredentials: true,
   });
   const [setlists, setSetlists] = useState([]);
-  const [errors, setErrors] = useState("");
 
   /** creates a new setlist and calls getallSetlists for rerender again */
   async function createSetlist(newSetlist) {
@@ -23,9 +22,7 @@ function Setlists() {
         { withCredentials: true }
       );
       getAllSetlists();
-    } catch (error) {
-      setErrors(errors);
-    }
+    } catch (error) {}
   }
 
   /** retrieves all setlists from the current user, sets the state for auto rerender */
@@ -34,11 +31,8 @@ function Setlists() {
       const { data } = await api.get(`/setlist/getall-setlists/${userEmail}`, {
         withCredentials: true,
       });
-      await setSetlists([setlists].concat(data));
-      setErrors(data);
-    } catch (error) {
-      setErrors(errors);
-    }
+      setSetlists(data);
+    } catch (error) {}
   }
 
   useEffect(() => {
