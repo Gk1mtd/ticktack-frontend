@@ -26,7 +26,7 @@ function Setlists() {
           className='list-item'
           to={`/setlist/${element._id}`}
         >
-          {element.name}Stuff
+          {element.name}
         </Link>
       ))}
       <form
