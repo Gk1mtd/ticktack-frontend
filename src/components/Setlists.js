@@ -42,7 +42,7 @@ function Setlists() {
 
   useEffect(() => {
     getAllSetlists();
-  }, [setlists.length]);
+  }, [setlists?.length]);
 
   return (
     <div className="Setlists">
