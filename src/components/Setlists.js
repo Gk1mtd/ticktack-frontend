@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import userIcon from "../assets/acc image.png";
 import { Link } from "react-router-dom";
+import axios from "axios"
 
 const api = axios.create({
-  baseURL: REACT_APP_API_URL,
+  baseURL: process.env.REACT_APP_API_URL,
   withCredentials: true,
 });
 
