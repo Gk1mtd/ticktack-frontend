@@ -56,7 +56,8 @@ function Setlists() {
       <div>
         <details>
           <summary>dev details</summary>
-          {JSON.stringify(errors)}
+          <p>{JSON.stringify(errors)}</p>
+          <p>{setlists.length}</p>
         </details>
       </div>
 
