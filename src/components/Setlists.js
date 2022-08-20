@@ -11,6 +11,7 @@ const api = axios.create({
 
 function Setlists() {
   const [setlists, setSetlists] = useState([]);
+  const [errors, setErrors] = useState("");
 
   /** creates a new setlist and calls getallSetlists for rerender again */
   async function createSetlist(newSetlist) {
@@ -21,7 +22,9 @@ function Setlists() {
         { withCredentials: true }
       );
       getAllSetlists();
-    } catch (error) {}
+    } catch (error) {
+      setErrors(errors);
+    }
   }
 
   /** retrieves all setlists from the current user, sets the state for auto rerender */
@@ -31,7 +34,10 @@ function Setlists() {
         withCredentials: true,
       });
       setSetlists(data);
-    } catch (error) {}
+      setErrors(data);
+    } catch (error) {
+      setErrors(errors);
+    }
   }
 
   useEffect(() => {
@@ -47,6 +53,7 @@ function Setlists() {
       </div>
 
       <h1>Setlists</h1>
+      <div>{errors}</div>
       {/** prints setlists from user, gained from custom hook usesetlistapi */}
       {setlists.map((element) => (
         <Link
