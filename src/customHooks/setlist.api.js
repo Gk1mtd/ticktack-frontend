@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-import { useParams } from "react-router-dom";
 
 /** easy to import hardcoded paths, used across the whole project */
 const { REACT_APP_API_URL } = process.env;
@@ -11,7 +10,6 @@ function useSetlistAPI() {
     baseURL: REACT_APP_API_URL,
     withCredentials: true,
   });
-  const { setlistId } = useParams();
 
   /** holds the error messages to rerender a component with the message */
   const [responseMessage, setResponseMessage] = React.useState();
