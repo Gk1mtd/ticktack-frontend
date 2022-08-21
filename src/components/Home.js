@@ -25,6 +25,15 @@ function Home() {
           setlist. Each song can have its own BPM.
         </p>
         <p>Thats Clickbeat, an app for musicians.</p>
+        <iframe
+          width="50%"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/D7-929Xh8yo"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen="true"
+        ></iframe>
       </div>
     </div>
   );
