@@ -5,7 +5,7 @@ import logo from "../assets/logo.webm";
 function Home() {
   return (
     <div className="Home">
-      <h1>Metro-Know-Me</h1>
+      <h1>Clickbeat</h1>
       <video muted={true} autoPlay={true} loop={true} src={logo} alt="logo2" />
       <Link className="link-button" to="/signup">
         Signup
@@ -24,7 +24,7 @@ function Home() {
           First Signup, then create a setlist. You can add songs in each
           setlist. Each song can have its own BPM.
         </p>
-        <p>Thats Metro-Know-Me, an app for musicians.</p>
+        <p>Thats Clickbeat, an app for musicians.</p>
       </div>
     </div>
   );
