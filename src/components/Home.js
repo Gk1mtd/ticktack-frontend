@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.webm";
+import axios from "axios";
+const { REACT_APP_API_URL } = process.env;
 
 function Home() {
+  // wakeup server!
+  const api = axios.create({
+    baseURL: REACT_APP_API_URL,
+    withCredentials: true,
+  });
+  async function getSetlist() {
+    try {
+      await api.get(`/setlist/get-setlist/${0}`);
+    } catch (error) {}
+  }
+  useEffect(() => {
+    getSetlist();
+  });
+
   return (
     <div className="Home">
       <h1>Clickbeat</h1>
