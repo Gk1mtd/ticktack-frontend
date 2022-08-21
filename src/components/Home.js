@@ -6,26 +6,11 @@ function Home() {
   return (
     <div className="Home">
       <h1>Clickbeat</h1>
+    <h2>Hi, Metroknowme was in need of a faster server and a new name. You can just follow this Link down there</h2>
       <video muted={true} autoPlay={true} loop={true} src={logo} alt="logo2" />
-      <Link className="link-button" to="/signup">
-        Signup
+      <Link className="link-button" to="https://clickbeat.netlify.app">
+        go to Clickbeat.app here
       </Link>
-      <br />
-      <Link className="link-button" to="/login">
-        Login
-      </Link>
-      <div className="info-text">
-        <h2>What is it all about?</h2>
-        <p>
-          It will help to organize your setlist and also shows the BPM for each
-          song.
-        </p>
-        <p>
-          First Signup, then create a setlist. You can add songs in each
-          setlist. Each song can have its own BPM.
-        </p>
-        <p>Thats Clickbeat, an app for musicians.</p>
-      </div>
     </div>
   );
 }
