@@ -31,7 +31,6 @@ function Home() {
           src="https://www.youtube-nocookie.com/embed/D7-929Xh8yo"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen="true"
         ></iframe>
       </div>
