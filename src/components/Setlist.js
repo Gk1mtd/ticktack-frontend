@@ -58,24 +58,37 @@ function Setlist() {
           alt="delete button"
         />
       </div>
-      {setlist?.songs?.map((song) => (
-        <div key={song._id}>
-          <div className="song-card">
-            <Metronome bpm={song.bpm} />
-            <Link
-              className="list-item"
-              to={`/setlist/${setlistId}/song/${song._id}`}
-            >
-              <p>
-                {song.name}
-                <br />
-                {song.bpm} BPM
-              </p>
-            </Link>
+      {setlist?.songs
+        ?.sort((a, b) => {
+          let fa = a.name.toLowerCase(),
+            fb = b.name.toLowerCase();
+
+          if (fa < fb) {
+            return -1;
+          }
+          if (fa > fb) {
+            return 1;
+          }
+          return 0;
+        })
+        .map((song) => (
+          <div key={song._id}>
+            <div className="song-card">
+              <Metronome bpm={song.bpm} />
+              <Link
+                className="list-item"
+                to={`/setlist/${setlistId}/song/${song._id}`}
+              >
+                <p>
+                  {song.name}
+                  <br />
+                  {song.bpm} BPM
+                </p>
+              </Link>
+            </div>
+            <hr />
           </div>
-          <hr />
-        </div>
-      ))}
+        ))}
       <form
         onSubmit={(event) => {
           event.preventDefault();

@@ -50,15 +50,28 @@ function Setlists() {
       <h1>Setlists</h1>
 
       {/** prints setlists from user, gained from custom hook usesetlistapi */}
-      {setlists.map((element) => (
-        <Link
-          key={element._id}
-          className="list-item"
-          to={`/setlist/${element._id}`}
-        >
-          {element.name}
-        </Link>
-      ))}
+      {setlists
+        .sort((a, b) => {
+          let fa = a.name.toLowerCase(),
+            fb = b.name.toLowerCase();
+
+          if (fa < fb) {
+            return -1;
+          }
+          if (fa > fb) {
+            return 1;
+          }
+          return 0;
+        })
+        .map((element) => (
+          <Link
+            key={element._id}
+            className="list-item"
+            to={`/setlist/${element._id}`}
+          >
+            {element.name}
+          </Link>
+        ))}
       <form
         onSubmit={(event) => {
           event.preventDefault();
